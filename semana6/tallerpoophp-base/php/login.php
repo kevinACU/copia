@@ -6,7 +6,7 @@ ini_set('display_errors', 1);
 $nombre = (isset($_POST['nombre'])) ? $_POST['nombre'] : '';
 $clave = (isset($_POST['clave'])) ? $_POST['clave'] : '';
 
-include '../class/class.usuarios.php';
+include 'class/class.usuarios.php';
 $usuario = new Usuario();
 $result = $usuario->getUsuarioAcceso($nombre);
 $resultado = $result->fetch_array(MYSQLI_ASSOC);
